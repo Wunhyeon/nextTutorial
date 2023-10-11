@@ -9,10 +9,16 @@ export default {
       },
     ],
   },
-  aditionalLinkTags: [
+  additionalLinkTags: [
     {
       rel: "shorcut icon",
       href: "/favicon.ico",
+    },
+  ],
+  additionalMetaTags: [
+    {
+      name: "naver-site-verification",
+      content: "2c8bd7a9d48c59cb09fb57bbf9b95477a00eac2d",
     },
   ],
 };
