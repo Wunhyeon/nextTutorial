@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
-              gtag('config', 'G-QG7PM9971M', {
+              gtag('config', 'G-9R9KPJ8F2Q', {
                 page_path: window.location.pathname,
               });
             `,
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QG7PM9971M`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-9R9KPJ8F2Q`}
       />
       <Component {...pageProps} />
       <DefaultSeo {...SEO} />
