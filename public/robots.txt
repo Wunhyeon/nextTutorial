@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://next-tutorial-pi-one.vercel.app
+
+# Sitemaps
+Sitemap: https://next-tutorial-pi-one.vercel.app/sitemap.xml
