@@ -5,6 +5,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import styles from "@/styles/detail.module.scss";
 import useCurrentStore from "@/hooks/useCurrentStore";
+import { NextSeo } from "next-seo";
 
 interface Props {
   store: Store;
@@ -27,17 +28,24 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
   }
 
   return (
-    <div
-      className={`${styles.detailSection} ${styles.selected} ${styles.expanded}`}
-    >
-      <DetailHeader
-        currentStore={store}
-        expanded={expanded}
-        // onClickArrow={() => goToMap()}
-        onClickArrow={goToMap}
+    <>
+      <NextSeo
+        title="상세페이지"
+        description="매장 상세페이지"
+        canonical={`https://next-tutorial-pi-one.vercel.app/${store.name}`}
       />
-      <DetailContent currentStore={store} expanded={expanded} />
-    </div>
+      <div
+        className={`${styles.detailSection} ${styles.selected} ${styles.expanded}`}
+      >
+        <DetailHeader
+          currentStore={store}
+          expanded={expanded}
+          // onClickArrow={() => goToMap()}
+          onClickArrow={goToMap}
+        />
+        <DetailContent currentStore={store} expanded={expanded} />
+      </div>
+    </>
   );
 };
 
